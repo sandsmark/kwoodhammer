@@ -48,6 +48,12 @@ QString inlib(char *file)
 	fullpath.sprintf("%s/kwoodhammer/%s",
 		KApplication::kde_datadir().data(),
 		file);
+        if (!QFile::exists(fullpath)) {
+            QString fullpath;
+            fullpath.sprintf("../kwoodhammer/%s",
+                    file);
+            return fullpath;
+        }
 	return fullpath;
 }
 
