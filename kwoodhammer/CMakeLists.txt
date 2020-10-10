@@ -32,6 +32,17 @@ install(TARGETS kwoodhammer RUNTIME DESTINATION ${KDE1_BINDIR})
 install_icon(kwoodhammer.xpm)
 install(FILES kwoodhammer.kdelnk DESTINATION ${KDE1_APPSDIR}/Utilities/)
 
+install_icon(kwooddecrypt.xpm)
+install_icon(kwoodsetup.xpm)
+install_icon(kwoodnew.xpm)
+install_icon(kwoodopen.xpm)
+install_icon(kwoodtable.xpm)
+install_icon(kwoodexit.xpm)
+install_icon(kwoodinfo.xpm)
+install_icon(kwoodsave.xpm)
+install(FILES kwoodhammer.gif DESTINATION ${KDE1_DATADIR}/kwoodhammer/pics)
+
+
 install(FILES
     index-1.html
     index-2.html
@@ -41,4 +52,10 @@ install(FILES
     index-6.html
     index.html
     DESTINATION ${KDE1_HTMLDIR}/en/kwoodhammer
+)
+
+install(FILES
+    kwoodhammerbase
+    kwoodhammerbase.german
+    DESTINATION ${KDE1_DATADIR}/kwoodhammer/
 )

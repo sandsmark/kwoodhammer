@@ -8,6 +8,7 @@
 
 **********************************************************************/
 #include <kapp.h>
+#include <kiconloader.h>
 #include <qpixmap.h>
 #include <qfont.h>
 #include <kquickhelp.h>
@@ -15,13 +16,15 @@
 #include "common.h"
 
 void  table::initDialog(){
+  KIconLoader loader;
+
   this->resize(350,320);
   this->setMinimumSize(350,320);
   this->setMaximumSize(350,320);
   QGroupBox_1= new QGroupBox(this,"NoName");
   QGroupBox_1->setGeometry(10,10,30,30);
   QGroupBox_1->setMinimumSize(0,0);
-  QGroupBox_1->setBackgroundPixmap(QPixmap(iniconhome("kwoodtable.xpm")));
+  QGroupBox_1->setBackgroundPixmap(loader.loadIcon("kwoodtable.xpm"));
 
   QLabel_1= new QLabel(this,"NoName");
   QLabel_1->setGeometry(50,10,290,30);

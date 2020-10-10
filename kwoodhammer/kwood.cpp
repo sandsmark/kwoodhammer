@@ -30,6 +30,8 @@
 #include <qtimer.h>
 #include <qevent.h>
 
+#include <kiconloader.h>
+
 WFlags WStyle_Splash = WStyle_Customize | WStyle_Tool | WStyle_NoBorder;
 QWidget *splash;
 QTimer *timer;
@@ -45,8 +47,9 @@ char *maintextclear;
 
 void kwood::splashBegin()
 {
+    KIconLoader  iconLoader;
 	splash = new QWidget( 0, "", WStyle_Splash);
-	splash->setBackgroundPixmap(QPixmap(inlib("kwoodhammer.gif")));
+	splash->setBackgroundPixmap(iconLoader.loadIcon("kwoodhammer.gif"));
   splash->setMinimumSize(320,200);
   splash->setMaximumSize(320,200);
 	splash->show();

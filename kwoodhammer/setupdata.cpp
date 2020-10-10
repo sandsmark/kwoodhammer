@@ -8,12 +8,15 @@
 
 **********************************************************************/
 #include <kapp.h>
+#include <kiconloader.h>
 #include <qfont.h>
 #include <qpixmap.h>
 #include "setup.h"
 #include "common.h"
 
 void  setup::initDialog(){
+  KIconLoader loader;
+
   this->resize(400,320);
   this->setMinimumSize(400,320);
   this->setMaximumSize(400,320);
@@ -26,7 +29,7 @@ void  setup::initDialog(){
   QGroupBox_1= new QGroupBox(this,"NoName");
   QGroupBox_1->setGeometry(10,10,30,30);
   QGroupBox_1->setMinimumSize(0,0);
-  QGroupBox_1->setBackgroundPixmap(QPixmap(iniconhome("kwoodsetup.xpm")));
+  QGroupBox_1->setBackgroundPixmap(loader.loadIcon("kwoodsetup.xpm"));
 
   QPushButton_1= new QPushButton(this,"NoName");
   QPushButton_1->setGeometry(10,280,100,30);

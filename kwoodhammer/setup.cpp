@@ -33,38 +33,21 @@ int round(float x)
 	return r;
 }
 
-char *iniconhome(char *file)
+QString inhome(char *file)
 {
-	char HOME_PATH[255];
-	char *fullpath;
-	strcpy(HOME_PATH, iconhomedir);
-	fullpath = (char*) malloc(strlen(HOME_PATH) + strlen(file) + 2);
-	strcpy(fullpath, HOME_PATH);
-	strcat(fullpath, "/");
-	strcat(fullpath, file);
+	QString fullpath;
+	fullpath.sprintf("%s/share/apps/kwoodhammer/%s",
+		KApplication::localkdedir().data(),
+		file);
 	return fullpath;
 }
 
-char *inhome(char *file)
+QString inlib(char *file)
 {
-	char HOME_PATH[255];
-	char *fullpath;
-	strcpy(HOME_PATH, getenv("HOME"));
-	fullpath = (char*) malloc(strlen(HOME_PATH) + strlen(file) + 2);
-	strcpy(fullpath, HOME_PATH);
-	strcat(fullpath, "/");
-	strcat(fullpath, file);
-	return fullpath;
-}
-
-char *inlib(char *file)
-{
-	char HOME_PATH[255];
-	char *fullpath;
-	strcpy(HOME_PATH, "/usr/lib/kwoodhammer/");
-	fullpath = (char*) malloc(strlen(HOME_PATH) + strlen(file) + 1);
-	strcpy(fullpath, HOME_PATH);
-	strcat(fullpath, file);
+	QString fullpath;
+	fullpath.sprintf("%s/kwoodhammer/%s",
+		KApplication::kde_datadir().data(),
+		file);
 	return fullpath;
 }
 
@@ -89,7 +72,7 @@ void stat_load(char *name)
 	int i;
 	long j;
 	char str[255];
-	strcpy(str, ".kwoodhammerbase");
+	strcpy(str, "kwoodhammerbase");
 	strcat(str, name);
 	strcpy(currentbase, name);
 	FILE * sf;
@@ -114,7 +97,7 @@ void stat_load(char *name)
 void setup::stat_save(char *name)
 {
 	char str[255];
-	strcpy(str, ".kwoodhammerbase");
+	strcpy(str, "kwoodhammerbase");
 	strcat(str, name);
 	FILE * sf = fopen(inhome(str), "w");
 	if(sf == NULL) fprintf(stderr, "Error opening statistics file!\n");

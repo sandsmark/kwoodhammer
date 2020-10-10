@@ -8,6 +8,7 @@
 
 **********************************************************************/
 #include <kapp.h>
+#include <kiconloader.h>
 #include <qfont.h>
 #include <qtooltip.h>
 #include <qpixmap.h>
@@ -15,6 +16,8 @@
 #include "common.h"
 
 void  kwood::initDialog(){
+  KIconLoader loader;
+
   this->resize(450,240);
   this->setMinimumSize(450,260);
   this->setMaximumSize(32767,32767);
@@ -36,62 +39,62 @@ void  kwood::initDialog(){
   QToolTip::add(QPushButton_7,i18n("Setup"));
   QPushButton_7->setText(i18n("Button"));
   QPushButton_7->setIsMenuButton(false);
-  QPushButton_7->setPixmap(QPixmap(iniconhome("kwoodsetup.xpm")));
+  QPushButton_7->setPixmap(loader.loadIcon("kwoodsetup.xpm"));
 
   QPushButton_8= new QPushButton(this,"NoName");
   QPushButton_8->setGeometry(170,50,40,30);
   QPushButton_8->setMinimumSize(0,0);
   QToolTip::add(QPushButton_8,i18n("Encryption"));
   QPushButton_8->setText(i18n("Button"));
-  QPushButton_8->setPixmap(QPixmap(iniconhome("kwooddecrypt.xpm")));
+  QPushButton_8->setPixmap(loader.loadIcon("kwooddecrypt.xpm"));
 
   QPushButton_9= new QPushButton(this,"NoName");
   QPushButton_9->setGeometry(210,50,40,30);
   QPushButton_9->setMinimumSize(0,0);
   QToolTip::add(QPushButton_9,i18n("Decryption"));
   QPushButton_9->setText(i18n("Button"));
-  QPushButton_9->setPixmap(QPixmap(iniconhome("kwoodencrypt.xpm")));
+  QPushButton_9->setPixmap(loader.loadIcon("kwoodencrypt.xpm"));
 
   QPushButton_10= new QPushButton(this,"NoName");
   QPushButton_10->setGeometry(360,50,40,30);
   QPushButton_10->setMinimumSize(0,0);
   QToolTip::add(QPushButton_10,i18n("Information"));
   QPushButton_10->setText(i18n("Button"));
-  QPushButton_10->setPixmap(QPixmap(iniconhome("kwoodinfo.xpm")));
+  QPushButton_10->setPixmap(loader.loadIcon("kwoodinfo.xpm"));
 
   QPushButton_11= new QPushButton(this,"NoName");
   QPushButton_11->setGeometry(400,50,40,30);
   QPushButton_11->setMinimumSize(0,0);
   QToolTip::add(QPushButton_11,i18n("Quit KWoodhammer"));
   QPushButton_11->setText(i18n("Button"));
-  QPushButton_11->setPixmap(QPixmap(iniconhome("kwoodexit.xpm")));
+  QPushButton_11->setPixmap(loader.loadIcon("kwoodexit.xpm"));
 
   QPushButton_12= new QPushButton(this,"NoName");
   QPushButton_12->setGeometry(10,50,40,30);
   QPushButton_12->setMinimumSize(0,0);
   QToolTip::add(QPushButton_12,i18n("New file"));
   QPushButton_12->setText(i18n("Button"));
-  QPushButton_12->setPixmap(QPixmap(iniconhome("kwoodnew.xpm")));
+  QPushButton_12->setPixmap(loader.loadIcon("kwoodnew.xpm"));
 
   QPushButton_13= new QPushButton(this,"NoName");
   QPushButton_13->setGeometry(50,50,40,30);
   QPushButton_13->setMinimumSize(0,0);
   QToolTip::add(QPushButton_13,i18n("Load a file"));
   QPushButton_13->setText(i18n("Button"));
-  QPushButton_13->setPixmap(QPixmap(iniconhome("kwoodopen.xpm")));
+  QPushButton_13->setPixmap(loader.loadIcon("kwoodopen.xpm"));
 
   QPushButton_14= new QPushButton(this,"NoName");
   QPushButton_14->setGeometry(250,50,30,30);
   QPushButton_14->setMinimumSize(0,0);
   QToolTip::add(QPushButton_14,i18n("Key Table"));
   QPushButton_14->setText(i18n("Button"));
-  QPushButton_14->setPixmap(QPixmap(iniconhome("kwoodtable.xpm")));
+  QPushButton_14->setPixmap(loader.loadIcon("kwoodtable.xpm"));
 
   QPushButton_1= new QPushButton(this,"NoName");
   QPushButton_1->setGeometry(90,50,40,30);
   QPushButton_1->setMinimumSize(0,0);
   QToolTip::add(QPushButton_1,i18n("Save file"));
   QPushButton_1->setText(i18n("Button"));
-  QPushButton_1->setPixmap(QPixmap(iniconhome("kwoodsave.xpm")));
+  QPushButton_1->setPixmap(loader.loadIcon("kwoodsave.xpm"));
 
 }

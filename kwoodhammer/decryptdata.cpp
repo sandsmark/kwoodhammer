@@ -8,6 +8,7 @@
 
 **********************************************************************/
 #include <kapp.h>
+#include <kiconloader.h>
 #include <qfont.h>
 #include <kquickhelp.h>
 #include <qpixmap.h>
@@ -15,6 +16,8 @@
 #include "common.h"
 
 void  decrypt::initDialog(){
+  KIconLoader loader;
+
   this->resize(400,330);
   this->setMinimumSize(400,330);
   this->setMaximumSize(400,330);
@@ -87,7 +90,7 @@ void  decrypt::initDialog(){
   QGroupBox_2= new QGroupBox(this,"NoName");
   QGroupBox_2->setGeometry(10,10,30,30);
   QGroupBox_2->setMinimumSize(0,0);
-  QGroupBox_2->setBackgroundPixmap(QPixmap(iniconhome("kwoodencrypt.xpm")));
+  QGroupBox_2->setBackgroundPixmap(loader.loadIcon("kwoodencrypt.xpm"));
 
   QMultiLineEdit_1= new QMultiLineEdit(this,"NoName");
   QMultiLineEdit_1->setGeometry(350,260,40,30);

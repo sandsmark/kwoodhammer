@@ -37,7 +37,6 @@
   */
 
 extern void stat_load(char *name);
-extern char *inhome(char *file);
 extern void stat_make();
 
 class setup : public QDialog  {

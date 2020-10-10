@@ -35,8 +35,6 @@ extern bool letters52, numbers10;
 extern bool rangeletter(int letter);
 extern int where_in_substc(char c);
 extern int where_in_substs(char c);
-extern char* iniconhome(char *file);
-extern char* inlib(char *file);
 extern bool valid(char c);
 extern bool allvalid(const char *str, bool strict);
 

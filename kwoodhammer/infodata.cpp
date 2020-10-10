@@ -8,19 +8,22 @@
 
 **********************************************************************/
 #include <kapp.h>
+#include <kiconloader.h>
 #include <qpixmap.h>
 #include <qfont.h>
 #include "info.h"
 #include "common.h"
 
 void  info::initDialog(){
+  KIconLoader loader;
+
   this->resize(350,340);
   this->setMinimumSize(350,300);
   this->setMaximumSize(350,300);
   QGroupBox_1= new QGroupBox(this,"NoName");
   QGroupBox_1->setGeometry(10,10,30,30);
   QGroupBox_1->setMinimumSize(0,0);
-  QGroupBox_1->setBackgroundPixmap(QPixmap(iniconhome("kwoodinfo.xpm")));
+  QGroupBox_1->setBackgroundPixmap(loader.loadIcon("kwoodinfo.xpm"));
 
   QLabel_1= new QLabel(this,"NoName");
   QLabel_1->setGeometry(50,10,290,30);
