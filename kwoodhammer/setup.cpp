@@ -92,21 +92,23 @@ void stat_load(char *name)
             strcat(str, currentbase);
         }
 
-	FILE * sf;
-	if(strlen(name) == 0) sf = fopen(inhome(str), "r");
-	else sf = fopen(inlib(str), "r");
+	FILE * sf = NULL;
+        QString path;
+	if(name && strlen(name) == 0) {
+            sf = fopen(inhome(str).data(), "r");
+        }
+        if (sf == NULL) {
+            sf = fopen(inlib(str).data(), "r");
+        }
 	if(sf == NULL) {
-            fprintf(stderr, "Error opening statistics file!\n");
+            fprintf(stderr, "Error opening statistics file for load!\n");
             return;
         }
 	while(!feof(sf))
 	{
 		fscanf(sf, "%c:%i\n", &i, &j);
-		if(validletter((unsigned char)i))
-		{
-			statistics[(unsigned char)i] = j;
-			maxstatistics += j;
-		}
+                statistics[(unsigned char)i] = j;
+                maxstatistics += j;
 	}
 	fclose(sf);
 }
@@ -293,26 +295,30 @@ void setup::slider_1(int value)
 void setup::stat_show()
 {
 	char *title;
-	char str[1000];
-	char str2[30];
+        QString content;
+	char str2[255];
+        memset(str2, 0, sizeof(str2));
 	int j = 0;
 	int snum;
-	strcpy(str, "");
 	for(int i = 0; i < 256; i++)
 	{
+                if (!statistics[i]) {
+                    continue;
+                }
 		if(validletter(i))
 		{
 			j++;
 			snum = 1 + round((float)snumodd * (float)statistics[i] / (float)maxstatistics);
-			sprintf(str2, "%c: %3.2f%% (%i)   ", i, 100.0 * (float)statistics[i] /
+			snprintf(str2, 30, "%c: %3.2f%% (%i)   ", i, 100.0 * (float)statistics[i] /
 				(float)maxstatistics, snum);
-			strcat(str, str2);
-			if(j % 5 == 0) strcat(str, "\n");
+                        content += str2;
+
+			if(j % 5 == 0) content += "\n";
 		}
 	}
 	if(strcmp(currentbase, "") == 0) title = "User statistic";
 	else title = "Standard statistics";
-	QMessageBox::information(this, title, str);
+	QMessageBox::information(this, title, content.data());
 }
 
 void setup::setup_ok()
