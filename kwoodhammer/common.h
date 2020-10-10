@@ -43,8 +43,5 @@ extern int markcount;
 extern kwood *kwoodw;
 extern table *tablew;
 
-extern char *homedir;
-extern char *iconhomedir;
-
 extern bool codeview;
 extern bool groupview;

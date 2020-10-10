@@ -41,7 +41,7 @@ install_icon(kwoodtable.xpm)
 install_icon(kwoodexit.xpm)
 install_icon(kwoodinfo.xpm)
 install_icon(kwoodsave.xpm)
-install(FILES kwoodhammer.gif DESTINATION ${KDE1_DATADIR}/kwoodhammer/pics)
+install(FILES kwoodhammer.gif DESTINATION ${KDE1_DATADIR}/KWoodhammer/pics)
 
 
 install(FILES
@@ -52,11 +52,11 @@ install(FILES
     docs/en/index-5.html
     docs/en/index-6.html
     docs/en/index.html
-    DESTINATION ${KDE1_HTMLDIR}/en/kwoodhammer
+    DESTINATION ${KDE1_HTMLDIR}/en/KWoodhammer
 )
 
 install(FILES
     kwoodhammerbase
     kwoodhammerbase.german
-    DESTINATION ${KDE1_DATADIR}/kwoodhammer/
+    DESTINATION ${KDE1_DATADIR}/KWoodhammer
 )

@@ -49,7 +49,9 @@ void kwood::splashBegin()
 {
     KIconLoader  iconLoader;
 	splash = new QWidget( 0, "", WStyle_Splash);
-	splash->setBackgroundPixmap(iconLoader.loadIcon("kwoodhammer.gif"));
+        QPixmap gif = iconLoader.loadIcon("kwoodhammer.gif");
+        if (gif.isNull()) puts("failed to load gif");
+	splash->setBackgroundPixmap(gif);
   splash->setMinimumSize(320,200);
   splash->setMaximumSize(320,200);
 	splash->show();

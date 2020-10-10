@@ -20,16 +20,10 @@
 #include <stdlib.h>
 
 kwood *kwoodw;
-char *homedir;
-char *iconhomedir;
 
 int main(int argc, char *argv[])
 {
   KApplication a(argc, argv, "KWoodhammer");
-	homedir = (char*)malloc(strlen(a.localkdedir())+1);
-	iconhomedir = (char*)malloc(strlen(a.kde_icondir())+1);
-	strcpy(homedir, a.localkdedir());
-	strcpy(iconhomedir, a.kde_icondir());
 	kwoodw = new kwood();
   a.setMainWidget(kwoodw);
 	kwoodw->setGeometry(200, 200, 400, 260);
