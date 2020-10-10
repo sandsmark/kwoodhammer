@@ -59,17 +59,17 @@ QString inlib(char *file)
 
 bool validletter(int letter)
 {
-	if((letter > 64) && (letter < 91)) return true;
-	if((letters52) && (letter > 96) && (letter < 123)) return true;
-	if((numbers10) && (letter > 47) && (letter < 58)) return true;
+	if((letter >= 'A') && (letter <= 'Z')) return true;
+	if((letters52) && (letter >= 'a') && (letter <= 'z')) return true;
+	if((numbers10) && (letter >= '0') && (letter <= '9')) return true;
 	else return false;
 }
 
 bool rangeletter(int letter)
 {
-	if((letter > 64) && (letter < 91)) return true;
-	if((letter > 96) && (letter < 123)) return true;
-	if((letter > 47) && (letter < 58)) return true;
+	if((letter >= 'A') && (letter <= 'Z')) return true;
+	if((letter > 'a') && (letter <= 'z')) return true;
+	if((letter > '0') && (letter <= '9')) return true;
 	else return false;
 }
 
