@@ -278,7 +278,7 @@ void kwood::updatetext()
 kwood::kwood(QWidget *parent, const char *name) : QWidget(parent,name){
 	initDialog();
 	this->setCaption("KWoodhammer");
-	stat_load(".german");
+	stat_load(".english");
 	stat_make();
 	maintext = (char*)malloc(1024);
 	maintextclear = (char*)malloc(1024);

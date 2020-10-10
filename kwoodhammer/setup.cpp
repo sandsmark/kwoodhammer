@@ -110,9 +110,9 @@ void setup::stat_save(char *name)
 	char str[255];
 	strcpy(str, "kwoodhammerbase");
 	strcat(str, name);
-	FILE * sf = fopen(inhome(str), "w");
+	FILE * sf = fopen(inhome(str).data(), "w");
 	if(sf == NULL) {
-            fprintf(stderr, "Error opening statistics file!\n");
+            fprintf(stderr, "Error opening statistics file for save %s!\n", inhome(str).data());
             return;
         }
 	for(int i = 0; i < 256; i++)
@@ -229,7 +229,7 @@ void setup::radiobutton_5()
 	QPushButton_7->setEnabled(false);
 	QPushButton_8->setEnabled(false);
 	QPushButton_9->setEnabled(false);
-	stat_load(".german");
+	stat_load(".english");
 	stat_make();
 }
 
@@ -316,11 +316,12 @@ void setup::setup_ok()
 
 setup::setup(QWidget *parent, const char *name) : QDialog(parent,name,true){
 	initDialog();
-	if(fopen(inhome("kwoodhammerbase"), "r") == 0)
+	if(fopen(inhome("kwoodhammerbase").data(), "r") == 0)
 	{
 		QMessageBox::information(this, "KWoodhammer", "Creating new user statistics.");
 		stat_clear();
 	}
+	QComboBox_1->insertItem("English", -1);
 	QComboBox_1->insertItem("German", -1);
 	connect(QPushButton_1, SIGNAL(clicked()), SLOT(setup_ok()));
 	connect(QPushButton_2, SIGNAL(clicked()), this, SLOT(hide()));
@@ -335,7 +336,7 @@ setup::setup(QWidget *parent, const char *name) : QDialog(parent,name,true){
 	connect(QPushButton_9, SIGNAL(clicked()), SLOT(stat_show()));
 	connect(QPushButton_8, SIGNAL(clicked()), SLOT(stat_clear()));
 	connect(QPushButton_7, SIGNAL(clicked()), SLOT(stat_add()));
-	if(strcmp(currentbase, ".german") == 0) QRadioButton_5->animateClick();
+	if(strcmp(currentbase, ".english") == 0) QRadioButton_5->animateClick();
 	if(strcmp(currentbase, "") == 0) QRadioButton_6->animateClick();
 	if(letters52) QRadioButton_4->animateClick();
 	if(numbers10) QCheckBox_2->animateClick();
