@@ -160,7 +160,7 @@ void kwood::iconSetup()
 {
 	maintext = (char*)realloc(maintext, strlen(QMultiLineEdit_1->text()) + 1);
 	strcpy(maintext, QMultiLineEdit_1->text());
-	setup *setupw = new setup();
+	setup *setupw = new setup(this);
 	setupw->setCaption("Setup");
 	setupw->show();
 }
