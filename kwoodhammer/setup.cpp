@@ -316,7 +316,7 @@ void setup::setup_ok()
 
 setup::setup(QWidget *parent, const char *name) : QDialog(parent,name,true){
 	initDialog();
-	if(fopen(inhome(".kwoodhammerbase"), "r") == 0)
+	if(fopen(inhome("kwoodhammerbase"), "r") == 0)
 	{
 		QMessageBox::information(this, "KWoodhammer", "Creating new user statistics.");
 		stat_clear();
