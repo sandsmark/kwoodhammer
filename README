@@ -1,0 +1,17 @@
+----------------
+KWoodhammer 1.00
+----------------
+
+This simple KDE-style program is thought to handle
+the most popular methods formerly used for cryptography
+in one place. Even if a text is encrypted with multiple
+keys and methods it is possible to find out the cleartext,
+because KWoodhammer provides an efficient step-by-step
+algorithm.
+
+The KWoodhammer homepage is http://kwoodhammer.sourceforge.net.
+Some documentation is also available there.
+The KWoodhammer Contest was running at http://www.maux.de,
+my personal homepage.
+
+Josef Spillner

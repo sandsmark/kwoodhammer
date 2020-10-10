@@ -1,0 +1,618 @@
+# Makefile.in generated automatically by automake 1.4 from Makefile.am
+
+# Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
+# This Makefile.in is free software; the Free Software Foundation
+# gives unlimited permission to copy and/or distribute it,
+# with or without modifications, as long as this notice is preserved.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+####### kdevelop will overwrite this part!!! (begin)##########
+
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+
+DESTDIR =
+
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+
+top_builddir = ..
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+transform = @program_transform_name@
+
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+build_alias = @build_alias@
+build_triplet = @build@
+host_alias = @host_alias@
+host_triplet = @host@
+target_alias = @target_alias@
+target_triplet = @target@
+CC = @CC@
+CPP = @CPP@
+CXX = @CXX@
+GLINC = @GLINC@
+GLLIB = @GLLIB@
+GMSGFMT = @GMSGFMT@
+IDL = @IDL@
+KDE_EXTRA_RPATH = @KDE_EXTRA_RPATH@
+KDE_INCLUDES = @KDE_INCLUDES@
+KDE_LDFLAGS = @KDE_LDFLAGS@
+KDE_RPATH = @KDE_RPATH@
+LD = @LD@
+LIBCOMPAT = @LIBCOMPAT@
+LIBCRYPT = @LIBCRYPT@
+LIBDL = @LIBDL@
+LIBJPEG = @LIBJPEG@
+LIBMICO = @LIBMICO@
+LIBOBJS = @LIBOBJS@
+LIBPNG = @LIBPNG@
+LIBPTHREAD = @LIBPTHREAD@
+LIBPYTHON = @LIBPYTHON@
+LIBQIMGIO = @LIBQIMGIO@
+LIBSOCKET = @LIBSOCKET@
+LIBTIFF = @LIBTIFF@
+LIBTOOL = @LIBTOOL@
+LIBUCB = @LIBUCB@
+LIBUTIL = @LIBUTIL@
+LIBXDMCP = @LIBXDMCP@
+LIBZ = @LIBZ@
+LIB_KDECORE = @LIB_KDECORE@
+LIB_KDEUI = @LIB_KDEUI@
+LIB_KFILE = @LIB_KFILE@
+LIB_KFM = @LIB_KFM@
+LIB_KHTML = @LIB_KHTML@
+LIB_KHTMLW = @LIB_KHTMLW@
+LIB_KIMGIO = @LIB_KIMGIO@
+LIB_LIBS = @LIB_LIBS@
+LIB_QT = @LIB_QT@
+LIB_X11 = @LIB_X11@
+LN_S = @LN_S@
+MAKEINFO = @MAKEINFO@
+MICO_INCLUDES = @MICO_INCLUDES@
+MICO_LDFLAGS = @MICO_LDFLAGS@
+MOC = @MOC@
+MSGFMT = @MSGFMT@
+NM = @NM@
+PACKAGE = @PACKAGE@
+PAMINC = @PAMINC@
+PAMLIBPATHS = @PAMLIBPATHS@
+PAMLIBS = @PAMLIBS@
+PASSWDLIB = @PASSWDLIB@
+PYTHONINC = @PYTHONINC@
+PYTHONLIB = @PYTHONLIB@
+QT_INCLUDES = @QT_INCLUDES@
+QT_LDFLAGS = @QT_LDFLAGS@
+RANLIB = @RANLIB@
+USE_NLS = @USE_NLS@
+VERSION = @VERSION@
+XBINDIR = @XBINDIR@
+XGETTEXT = @XGETTEXT@
+XPMINC = @XPMINC@
+XPMLIB = @XPMLIB@
+X_EXTRA_LIBS = @X_EXTRA_LIBS@
+X_INCLUDES = @X_INCLUDES@
+X_LDFLAGS = @X_LDFLAGS@
+X_SERVER = @X_SERVER@
+ac_xdmdir = @ac_xdmdir@
+all_includes = @all_includes@
+all_libraries = @all_libraries@
+install_root = @install_root@
+kde_appsdir = @kde_appsdir@
+kde_bindir = @kde_bindir@
+kde_cgidir = @kde_cgidir@
+kde_confdir = @kde_confdir@
+kde_datadir = @kde_datadir@
+kde_htmldir = @kde_htmldir@
+kde_icondir = @kde_icondir@
+kde_includes = @kde_includes@
+kde_libraries = @kde_libraries@
+kde_locale = @kde_locale@
+kde_mimedir = @kde_mimedir@
+kde_minidir = @kde_minidir@
+kde_partsdir = @kde_partsdir@
+kde_sounddir = @kde_sounddir@
+kde_toolbardir = @kde_toolbardir@
+kde_wallpaperdir = @kde_wallpaperdir@
+qt_includes = @qt_includes@
+qt_libraries = @qt_libraries@
+x_includes = @x_includes@
+x_libraries = @x_libraries@
+xdmconfigsubdir = @xdmconfigsubdir@
+# claim, which subdirectories you want to install
+# you can add here more. This one gets installed 
+bin_PROGRAMS = kwoodhammer 
+kwoodhammer_SOURCES = progressdata.cpp progress.cpp tabledata.cpp table.cpp setupdata.cpp setup.cpp infodata.cpp info.cpp decryptdata.cpp decrypt.cpp encryptdata.cpp encrypt.cpp kwooddata.cpp kwood.cpp main.cpp 
+kwoodhammer_LDADD = -lkdeui -lkdecore -lqt -lXext -lX11 $(LIBSOCKET)
+
+SUBDIRS = docs 
+
+EXTRA_DIST = main.cpp kwoodhammer.kdelnk kwoodhammer.xpm mini-kwoodhammer.xpm kwood.kdevdlg kwood.h kwood.cpp kwooddata.cpp encrypt.kdevdlg encrypt.h encrypt.cpp encryptdata.cpp decrypt.kdevdlg decrypt.h decrypt.cpp decryptdata.cpp setup.kdevdlg kwooddecrypt.xpm kwoodencrypt.xpm kwoodsetup.xpm info.kdevdlg info.h info.cpp infodata.cpp setup.h setup.cpp setupdata.cpp kwoodnew.xpm kwoodopen.xpm common.h kwoodtable.xpm table.kdevdlg table.h table.cpp tabledata.cpp kwoodhammerbase kwoodhammerbase.german kwoodexit.xpm kwoodinfo.xpm kwoodhammer.gif kwoodsave.xpm progress.kdevdlg progress.h progress.cpp progressdata.cpp 
+
+####### kdevelop will overwrite this part!!! (end)############
+# this 10 paths are KDE specific. Use them:
+# kde_htmldir       Where your docs should go to. (contains lang subdirs)
+# kde_appsdir       Where your application file (.kdelnk) should go to. 
+# kde_icondir       Where your icon should go to.
+# kde_minidir       Where your mini icon should go to.
+# kde_datadir       Where you install application data. (Use a subdir)
+# kde_locale        Where translation files should go to.(contains lang subdirs)
+# kde_cgidir        Where cgi-bin executables should go to.
+# kde_confdir       Where config files should go to.
+# kde_mimedir       Where mimetypes should go to.
+# kde_toolbardir    Where general toolbar icons should go to.
+# kde_wallpaperdir  Where general wallpapers should go to.
+
+# set the include path for X, qt and KDE
+INCLUDES = $(all_includes)
+
+kwoodhammer_METASOURCES =  decrypt.moc.cpp encrypt.moc.cpp info.moc.cpp kwood.moc.cpp progress.moc.cpp setup.moc.cpp table.moc.cpp 
+
+# the library search path. 
+kwoodhammer_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+
+# them while "make clean", use CLEANFILES
+DISTCLEANFILES = $(kwoodhammer_METASOURCES)
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+CONFIG_HEADER = ../config.h
+CONFIG_CLEAN_FILES = 
+PROGRAMS =  $(bin_PROGRAMS)
+
+
+DEFS = @DEFS@ -I. -I$(srcdir) -I..
+CPPFLAGS = @CPPFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+kwoodhammer_OBJECTS =  progressdata.o progress.o tabledata.o table.o  decrypt.moc.o encrypt.moc.o info.moc.o kwood.moc.o progress.moc.o setup.moc.o table.moc.o \
+setupdata.o setup.o infodata.o info.o decryptdata.o decrypt.o \
+encryptdata.o encrypt.o kwooddata.o kwood.o main.o
+kwoodhammer_DEPENDENCIES = 
+CXXFLAGS = @CXXFLAGS@
+CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+CXXLD = $(CXX)
+CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+DIST_COMMON =  Makefile.am Makefile.in
+
+
+DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+
+TAR = tar
+GZIP_ENV = --best
+SOURCES = $(kwoodhammer_SOURCES)
+OBJECTS = $(kwoodhammer_OBJECTS)
+
+all: all-redirect
+.SUFFIXES:
+.SUFFIXES: .S .c .cpp .lo .o .s
+$(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps kwoodhammer/Makefile
+	cd $(top_srcdir) && perl automoc kwoodhammer-1.00/kwoodhammer/Makefile.in
+
+Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) \
+	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
+
+mostlyclean-binPROGRAMS:
+
+clean-binPROGRAMS:
+	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+
+distclean-binPROGRAMS:
+
+maintainer-clean-binPROGRAMS:
+
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	  else :; fi; \
+	done
+
+uninstall-binPROGRAMS:
+	@$(NORMAL_UNINSTALL)
+	list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	done
+
+.c.o:
+	$(COMPILE) -c $<
+
+.s.o:
+	$(COMPILE) -c $<
+
+.S.o:
+	$(COMPILE) -c $<
+
+mostlyclean-compile:
+	-rm -f *.o core *.core
+
+clean-compile:
+
+distclean-compile:
+	-rm -f *.tab.c
+
+maintainer-clean-compile:
+
+.c.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+.s.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+.S.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+mostlyclean-libtool:
+	-rm -f *.lo
+
+clean-libtool:
+	-rm -rf .libs _libs
+
+distclean-libtool:
+
+maintainer-clean-libtool:
+
+kwoodhammer: $(kwoodhammer_OBJECTS) $(kwoodhammer_DEPENDENCIES)
+	@rm -f kwoodhammer
+	$(CXXLINK) $(kwoodhammer_LDFLAGS) $(kwoodhammer_OBJECTS) $(kwoodhammer_LDADD) $(LIBS)
+.cpp.o:
+	$(CXXCOMPILE) -c $<
+.cpp.lo:
+	$(LTCXXCOMPILE) -c $<
+
+# This directory's subdirectories are mostly independent; you can cd
+# into them and run `make' without going through this Makefile.
+# To change the values of `make' variables: instead of editing Makefiles,
+# (1) if the variable is set in `config.status', edit `config.status'
+#     (which will cause the Makefiles to be regenerated when you run `make');
+# (2) otherwise, pass the desired values on the `make' command line.
+
+@SET_MAKE@
+
+all-recursive install-data-recursive install-exec-recursive \
+installdirs-recursive install-recursive uninstall-recursive  \
+check-recursive installcheck-recursive info-recursive dvi-recursive:
+	@set fnord $(MAKEFLAGS); amf=$$2; \
+	dot_seen=no; \
+	target=`echo $@ | sed s/-recursive//`; \
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  echo "Making $$target in $$subdir"; \
+	  if test "$$subdir" = "."; then \
+	    dot_seen=yes; \
+	    local_target="$$target-am"; \
+	  else \
+	    local_target="$$target"; \
+	  fi; \
+	  (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) $$local_target) \
+	   || case "$$amf" in *=*) exit 1;; *k*) fail=yes;; *) exit 1;; esac; \
+	done; \
+	if test "$$dot_seen" = "no"; then \
+	  $(MAKE) $(AM_MAKEFLAGS) "$$target-am" || exit 1; \
+	fi; test -z "$$fail"
+
+mostlyclean-recursive clean-recursive distclean-recursive \
+maintainer-clean-recursive:
+	@set fnord $(MAKEFLAGS); amf=$$2; \
+	dot_seen=no; \
+	rev=''; list='$(SUBDIRS)'; for subdir in $$list; do \
+	  rev="$$subdir $$rev"; \
+	  test "$$subdir" = "." && dot_seen=yes; \
+	done; \
+	test "$$dot_seen" = "no" && rev=". $$rev"; \
+	target=`echo $@ | sed s/-recursive//`; \
+	for subdir in $$rev; do \
+	  echo "Making $$target in $$subdir"; \
+	  if test "$$subdir" = "."; then \
+	    local_target="$$target-am"; \
+	  else \
+	    local_target="$$target"; \
+	  fi; \
+	  (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) $$local_target) \
+	   || case "$$amf" in *=*) exit 1;; *k*) fail=yes;; *) exit 1;; esac; \
+	done && test -z "$$fail"
+tags-recursive:
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  test "$$subdir" = . || (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) tags); \
+	done
+
+tags: TAGS
+
+ID: $(HEADERS) $(SOURCES) $(LISP)
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	here=`pwd` && cd $(srcdir) \
+	  && mkid -f$$here/ID $$unique $(LISP)
+
+TAGS: tags-recursive $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+   if test "$$subdir" = .; then :; else \
+	    test -f $$subdir/TAGS && tags="$$tags -i $$here/$$subdir/TAGS"; \
+   fi; \
+	done; \
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+	  || (cd $(srcdir) && etags $(ETAGS_ARGS) $$tags  $$unique $(LISP) -o $$here/TAGS)
+
+mostlyclean-tags:
+
+clean-tags:
+
+distclean-tags:
+	-rm -f TAGS ID
+
+maintainer-clean-tags:
+
+distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+
+subdir = kwoodhammer
+
+distdir: $(DISTFILES)
+	@for file in $(DISTFILES); do \
+	  d=$(srcdir); \
+	  if test -d $$d/$$file; then \
+	    cp -pr $$/$$file $(distdir)/$$file; \
+	  else \
+	    test -f $(distdir)/$$file \
+	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+	  fi; \
+	done
+	for subdir in $(SUBDIRS); do \
+	  if test "$$subdir" = .; then :; else \
+	    test -d $(distdir)/$$subdir \
+	    || mkdir $(distdir)/$$subdir \
+	    || exit 1; \
+	    chmod 777 $(distdir)/$$subdir; \
+	    (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) top_distdir=../$(top_distdir) distdir=../$(distdir)/$$subdir distdir) \
+	      || exit 1; \
+	  fi; \
+	done
+decryptdata.o: decryptdata.cpp ../config.h decrypt.h common.h kwood.h \
+	table.h
+decrypt.moc.o: decrypt.moc.cpp decrypt.h
+decrypt.o: decrypt.cpp decrypt.h common.h kwood.h ../config.h table.h \
+	progress.h
+encryptdata.o: encryptdata.cpp ../config.h encrypt.h common.h kwood.h \
+	table.h
+encrypt.moc.o: encrypt.moc.cpp encrypt.h
+encrypt.o: encrypt.cpp encrypt.h common.h kwood.h ../config.h table.h
+infodata.o: infodata.cpp ../config.h info.h common.h kwood.h table.h
+info.moc.o: info.moc.cpp info.h
+info.o: info.cpp info.h
+kwooddata.o: kwooddata.cpp ../config.h kwood.h common.h table.h
+kwoodhammer.moc.o: kwoodhammer.moc.cpp kwoodhammer.h ../config.h
+kwoodhammer.o: kwoodhammer.cpp kwoodhammer.h ../config.h
+kwood.moc.o: kwood.moc.cpp kwood.h ../config.h
+kwood.o: kwood.cpp kwood.h ../config.h encrypt.h decrypt.h setup.h \
+	info.h table.h common.h
+main.o: main.cpp common.h kwood.h ../config.h table.h
+progressdata.o: progressdata.cpp ../config.h progress.h common.h kwood.h \
+	table.h
+progress.moc.o: progress.moc.cpp progress.h
+progress.o: progress.cpp progress.h
+setupdata.o: setupdata.cpp ../config.h setup.h common.h kwood.h table.h
+setup.moc.o: setup.moc.cpp setup.h
+setup.o: setup.cpp setup.h common.h kwood.h ../config.h table.h
+splashdata.o: splashdata.cpp ../config.h splash.h
+splash.moc.o: splash.moc.cpp splash.h
+splash.o: splash.cpp splash.h
+tabledata.o: tabledata.cpp ../config.h table.h common.h kwood.h
+table.moc.o: table.moc.cpp table.h
+table.o: table.cpp common.h kwood.h ../config.h table.h
+
+info-am:
+info: info-recursive
+dvi-am:
+dvi: dvi-recursive
+check-am: all-am
+check: check-recursive
+installcheck-am:
+installcheck: installcheck-recursive
+install-exec-am: install-binPROGRAMS
+install-exec: install-exec-recursive
+
+install-data-am: install-data-local
+install-data: install-data-recursive
+
+install-am: all-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+install: install-recursive
+uninstall-am: uninstall-binPROGRAMS uninstall-local
+uninstall: uninstall-recursive
+all-am: Makefile $(PROGRAMS)
+all-redirect: all-recursive
+install-strip:
+	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+installdirs: installdirs-recursive
+installdirs-am:
+	$(mkinstalldirs)  $(DESTDIR)$(bindir)
+
+
+mostlyclean-generic:
+
+clean-generic:
+
+distclean-generic:
+	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
+
+maintainer-clean-generic:
+mostlyclean-am:  mostlyclean-binPROGRAMS mostlyclean-compile \
+		mostlyclean-libtool mostlyclean-tags \
+		mostlyclean-generic
+
+mostlyclean: mostlyclean-recursive
+
+clean-am:  clean-binPROGRAMS clean-compile clean-libtool clean-tags \
+		clean-generic mostlyclean-am
+
+clean: clean-recursive
+
+distclean-am:  distclean-binPROGRAMS distclean-compile distclean-libtool \
+		distclean-tags distclean-generic clean-am
+	-rm -f libtool
+
+distclean: distclean-metasources distclean-recursive
+
+maintainer-clean-am:  maintainer-clean-binPROGRAMS \
+		maintainer-clean-compile maintainer-clean-libtool \
+		maintainer-clean-tags maintainer-clean-generic \
+		distclean-am
+	@echo "This command is intended for maintainers to use;"
+	@echo "it deletes files that may require special tools to rebuild."
+
+maintainer-clean: maintainer-clean-recursive
+
+.PHONY: mostlyclean-binPROGRAMS distclean-binPROGRAMS clean-binPROGRAMS \
+maintainer-clean-binPROGRAMS uninstall-binPROGRAMS install-binPROGRAMS \
+mostlyclean-compile distclean-compile clean-compile \
+maintainer-clean-compile mostlyclean-libtool distclean-libtool \
+clean-libtool maintainer-clean-libtool install-data-recursive \
+uninstall-data-recursive install-exec-recursive \
+uninstall-exec-recursive installdirs-recursive uninstalldirs-recursive \
+all-recursive check-recursive installcheck-recursive info-recursive \
+dvi-recursive mostlyclean-recursive distclean-recursive clean-recursive \
+maintainer-clean-recursive tags tags-recursive mostlyclean-tags \
+distclean-tags clean-tags maintainer-clean-tags distdir info-am info \
+dvi-am dvi check check-am installcheck-am installcheck install-exec-am \
+install-exec install-data-local install-data-am install-data install-am \
+install uninstall-local uninstall-am uninstall all-redirect all-am all \
+installdirs-am installdirs mostlyclean-generic distclean-generic \
+clean-generic maintainer-clean-generic clean mostlyclean distclean \
+maintainer-clean
+
+
+install-data-local:
+	$(mkinstalldirs) $(kde_appsdir)/Applications/
+	$(INSTALL_DATA) kwoodhammer.kdelnk $(kde_appsdir)/Applications/kwoodhammer.kdelnk
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodhammer.xpm $(kde_icondir)/kwoodhammer.xpm
+	$(mkinstalldirs) $(kde_minidir)/
+	$(INSTALL_DATA) mini-kwoodhammer.xpm $(kde_minidir)/kwoodhammer.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwooddecrypt.xpm $(kde_icondir)/kwooddecrypt.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodencrypt.xpm $(kde_icondir)/kwoodencrypt.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodsetup.xpm $(kde_icondir)/kwoodsetup.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodnew.xpm $(kde_icondir)/kwoodnew.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodopen.xpm $(kde_icondir)/kwoodopen.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodtable.xpm $(kde_icondir)/kwoodtable.xpm
+	$(mkinstalldirs) /usr/lib/kwoodhammer/
+	$(INSTALL_DATA) kwoodhammerbase /usr/lib/kwoodhammer/.kwoodhammerbase
+	$(mkinstalldirs) /usr/lib/kwoodhammer/
+	$(INSTALL_DATA) kwoodhammerbase.german /usr/lib/kwoodhammer/.kwoodhammerbase.german
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodexit.xpm $(kde_icondir)/kwoodexit.xpm
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodinfo.xpm $(kde_icondir)/kwoodinfo.xpm
+	$(mkinstalldirs) /usr/lib/kwoodhammer/
+	$(INSTALL_DATA) kwoodhammer.gif /usr/lib/kwoodhammer/kwoodhammer.gif
+	$(mkinstalldirs) $(kde_icondir)/
+	$(INSTALL_DATA) kwoodsave.xpm $(kde_icondir)/kwoodsave.xpm
+
+uninstall-local:
+	-rm -f $(kde_appsdir)/Applications/kwoodhammer.kdelnk
+	-rm -f $(kde_icondir)/kwoodhammer.xpm
+	-rm -f $(kde_minidir)/kwoodhammer.xpm
+	-rm -f $(kde_icondir)/kwooddecrypt.xpm
+	-rm -f $(kde_icondir)/kwoodencrypt.xpm
+	-rm -f $(kde_icondir)/kwoodsetup.xpm
+	-rm -f $(kde_icondir)/kwoodnew.xpm
+	-rm -f $(kde_icondir)/kwoodopen.xpm
+	-rm -f $(kde_icondir)/kwoodtable.xpm
+	-rm -f /usr/lib/kwoodhammer/.kwoodhammerbase
+	-rm -f /usr/lib/kwoodhammer/.kwoodhammerbase.german
+	-rm -f $(kde_icondir)/kwoodexit.xpm
+	-rm -f $(kde_icondir)/kwoodinfo.xpm
+	-rm -f /usr/lib/kwoodhammer/kwoodhammer.gif
+	-rm -f $(kde_icondir)/kwoodsave.xpm
+
+# make messages.po. Move this one to ../po/ and "make merge" in po
+# the -x is for skipping messages already translated in kdelibs
+messages:
+	$(XGETTEXT) -C -ki18n -x $(KDEDIR)/include/kde.pot `find . -name \*.h -o -name \*.cpp -o -name \*.cc` -o ../po/kwoodhammer.pot 
+
+# Tell versions [3.59,3.63) of GNU make to not export all variables.
+# Otherwise a system limit (for SysV at least) may be exceeded.
+.NOEXPORT:
+
+
+decrypt.moc.cpp: $(srcdir)/decrypt.h
+	$(MOC) $(srcdir)/decrypt.h -o decrypt.moc.cpp
+
+encrypt.moc.cpp: $(srcdir)/encrypt.h
+	$(MOC) $(srcdir)/encrypt.h -o encrypt.moc.cpp
+
+info.moc.cpp: $(srcdir)/info.h
+	$(MOC) $(srcdir)/info.h -o info.moc.cpp
+
+kwood.moc.cpp: $(srcdir)/kwood.h
+	$(MOC) $(srcdir)/kwood.h -o kwood.moc.cpp
+
+progress.moc.cpp: $(srcdir)/progress.h
+	$(MOC) $(srcdir)/progress.h -o progress.moc.cpp
+
+setup.moc.cpp: $(srcdir)/setup.h
+	$(MOC) $(srcdir)/setup.h -o setup.moc.cpp
+
+table.moc.cpp: $(srcdir)/table.h
+	$(MOC) $(srcdir)/table.h -o table.moc.cpp
+
+distclean-metasources:
+	-rm -f decrypt.moc.cpp encrypt.moc.cpp info.moc.cpp kwood.moc.cpp progress.moc.cpp setup.moc.cpp table.moc.cpp 
+
+# DO_NOT_USE_AUTOMOC

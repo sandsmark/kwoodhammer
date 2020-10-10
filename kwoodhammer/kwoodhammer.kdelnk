@@ -1,0 +1,12 @@
+# KDE Config File  
+[KDE Desktop Entry]
+Type=Application
+Exec=kwoodhammer -caption "%c" %i %m  
+Icon=kwoodhammer.xpm
+MiniIcon=kwoodhammer.xpm
+DocPath=kwoodhammer/index.html
+Comment=
+Comment[de]=
+Terminal=0
+Name=Kwoodhammer
+Name[de]=Kwoodhammer

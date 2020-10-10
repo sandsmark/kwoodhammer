@@ -1,0 +1,296 @@
+// KDevelop Dialog Editor File (.kdevdlg)
+// 
+// Created by KDlgEdit Version 0.1alpha (C) 1999 by Pascal Krahmer
+// Get KDevelop including KDlgEdit at "www.beast.de/kdevelop"
+// 
+data Information
+{
+   Filename="/home/opengl/kwoodhammer/kwoodhammer/table.kdevdlg"
+   KDevelopVersion="0.4"
+   DlgEditVersion="0.1alpha"
+   LastChanged="Sun May 7 16:40:04 2000"
+}
+
+data SessionManagement
+{
+   OpenedRoot_1="Appearance"
+   OpenedRoot_2="C++ Code"
+   OpenedRoot_3="General"
+   OpenedRoot_4="Geometry"
+   OpenedRootCount="4"
+}
+
+item QWidget
+{
+   Name="NoName"
+   VarName="this"
+   X="0"
+   Y="0"
+   Width="350"
+   Height="320"
+   MinWidth="350"
+   MinHeight="320"
+   MaxWidth="350"
+   MaxHeight="320"
+
+   item QGroupBox
+   {
+      Name="NoName"
+      VarName="QGroupBox_1"
+      X="10"
+      Y="10"
+      Width="30"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      BgPixmap="kwoodtable.xpm"
+   }
+
+   item QLabel
+   {
+      Name="NoName"
+      VarName="QLabel_1"
+      X="50"
+      Y="10"
+      Width="290"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      Font=""helvetica" "20" "50" "FALSE""
+      Text="KWoodhammer Key Table"
+   }
+
+   item QGroupBox
+   {
+      Name="NoName"
+      VarName="QGroupBox_2"
+      X="10"
+      Y="200"
+      Width="330"
+      Height="70"
+      MinWidth="0"
+      MinHeight="0"
+
+      item QComboBox
+      {
+         Name="NoName"
+         VarName="QComboBox_1"
+         X="80"
+         Y="10"
+         Width="60"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         InsertionPolicy="AtTop"
+      }
+
+      item QComboBox
+      {
+         Name="NoName"
+         VarName="QComboBox_2"
+         X="80"
+         Y="40"
+         Width="60"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         InsertionPolicy="AtTop"
+      }
+
+      item QLabel
+      {
+         Name="NoName"
+         VarName="QLabel_2"
+         X="10"
+         Y="10"
+         Width="50"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Row"
+      }
+
+      item QLabel
+      {
+         Name="NoName"
+         VarName="QLabel_3"
+         X="10"
+         Y="40"
+         Width="60"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Column"
+      }
+
+      item QLabel
+      {
+         Name="NoName"
+         VarName="QLabel_4"
+         X="160"
+         Y="40"
+         Width="50"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Letter"
+      }
+
+      item QComboBox
+      {
+         Name="NoName"
+         VarName="QComboBox_3"
+         X="220"
+         Y="40"
+         Width="100"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         InsertionPolicy="AtTop"
+      }
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      VarName="QPushButton_1"
+      X="120"
+      Y="280"
+      Width="100"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      Text="OK"
+   }
+
+   item QLabel
+   {
+      Name="NoName"
+      VarName="QLabel_5"
+      X="10"
+      Y="170"
+      Width="330"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Customize table"
+   }
+
+   item QLabel
+   {
+      Name="NoName"
+      VarName="QLabel_6"
+      X="10"
+      Y="50"
+      Width="330"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Create table"
+   }
+
+   item QButtonGroup
+   {
+      Name="NoName"
+      VarName="QButtonGroup_1"
+      X="10"
+      Y="80"
+      Width="330"
+      Height="80"
+      MinWidth="0"
+      MinHeight="0"
+
+      item QRadioButton
+      {
+         QuickHelp="<red>Trithemius<br><black>This German invented the simplest polyalphabetical encryption table."
+         Name="NoName"
+         VarName="QRadioButton_1"
+         X="10"
+         Y="10"
+         Width="90"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Trithemius"
+         isChecked="true"
+      }
+
+      item QRadioButton
+      {
+         Name="NoName"
+         VarName="QRadioButton_2"
+         X="10"
+         Y="30"
+         Width="90"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Random"
+      }
+
+      item QRadioButton
+      {
+         Name="NoName"
+         VarName="QRadioButton_3"
+         X="10"
+         Y="50"
+         Width="90"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Clear"
+      }
+
+      item QLineEdit
+      {
+         Name="NoName"
+         VarName="QLineEdit_1"
+         X="220"
+         Y="10"
+         Width="100"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         hasFrame="true"
+      }
+
+      item QLabel
+      {
+         Name="NoName"
+         VarName="QLabel_7"
+         X="110"
+         Y="10"
+         Width="100"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Keyword"
+      }
+
+      item QPushButton
+      {
+         Name="NoName"
+         VarName="QPushButton_2"
+         X="110"
+         Y="50"
+         Width="100"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Create"
+      }
+
+      item QPushButton
+      {
+         Name="NoName"
+         VarName="QPushButton_3"
+         X="220"
+         Y="50"
+         Width="100"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Show"
+      }
+   }
+}

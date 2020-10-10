@@ -1,0 +1,305 @@
+// KDevelop Dialog Editor File (.kdevdlg)
+// 
+// Created by KDlgEdit Version 0.1alpha (C) 1999 by Pascal Krahmer
+// Get KDevelop including KDlgEdit at "www.beast.de/kdevelop"
+// 
+data Information
+{
+   Filename="/home/opengl/kwoodhammer/kwoodhammer/setup.kdevdlg"
+   KDevelopVersion="0.4"
+   DlgEditVersion="0.1alpha"
+   LastChanged="Sun May 7 15:55:20 2000"
+}
+
+data SessionManagement
+{
+   OpenedRoot_1="Appearance"
+   OpenedRoot_2="C++ Code"
+   OpenedRoot_3="General"
+   OpenedRoot_4="Geometry"
+   OpenedRootCount="4"
+}
+
+item QWidget
+{
+   Name="NoName"
+   VarName="this"
+   X="0"
+   Y="0"
+   Width="400"
+   Height="320"
+   MinWidth="400"
+   MinHeight="320"
+   MaxWidth="400"
+   MaxHeight="320"
+
+   item QLabel
+   {
+      Name="NoName"
+      VarName="QLabel_1"
+      X="50"
+      Y="10"
+      Width="340"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      Font=""helvetica" "20" "50" "FALSE""
+      Text="KWoodhammer Setup"
+   }
+
+   item QGroupBox
+   {
+      Name="NoName"
+      VarName="QGroupBox_1"
+      X="10"
+      Y="10"
+      Width="30"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      BgPixmap="kwoodsetup.xpm"
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      VarName="QPushButton_1"
+      X="10"
+      Y="280"
+      Width="100"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      Text="OK"
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      VarName="QPushButton_2"
+      X="120"
+      Y="280"
+      Width="100"
+      Height="30"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Cancel"
+   }
+
+   item QRadioButton
+   {
+      Name="NoName"
+      VarName="QRadioButton_5"
+      X="10"
+      Y="210"
+      Width="160"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Use standard statistics"
+      isChecked="true"
+   }
+
+   item QLabel
+   {
+      Name="NoName"
+      VarName="QLabel_3"
+      X="10"
+      Y="180"
+      Width="380"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Database"
+   }
+
+   item QRadioButton
+   {
+      Name="NoName"
+      VarName="QRadioButton_6"
+      X="10"
+      Y="240"
+      Width="160"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Use user statistics"
+   }
+
+   item QGroupBox
+   {
+      Name="NoName"
+      VarName="QGroupBox_3"
+      X="10"
+      Y="80"
+      Width="380"
+      Height="90"
+      MinWidth="0"
+      MinHeight="0"
+
+      item QRadioButton
+      {
+         Name="NoName"
+         VarName="QRadioButton_3"
+         X="10"
+         Y="10"
+         Width="170"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="A-Z (26 letters only)"
+         isChecked="true"
+      }
+
+      item QRadioButton
+      {
+         Name="NoName"
+         VarName="QRadioButton_4"
+         X="190"
+         Y="10"
+         Width="180"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="A-Z, a-z (52 letters)"
+      }
+
+      item QCheckBox
+      {
+         Name="NoName"
+         VarName="QCheckBox_2"
+         X="10"
+         Y="40"
+         Width="360"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Use numbers (using extra chars: 10)"
+      }
+
+      item QCheckBox
+      {
+         Name="NoName"
+         VarName="QCheckBox_3"
+         X="10"
+         Y="60"
+         Width="250"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Text="Use homophony (using extra chars: 0)"
+         isChecked="false"
+      }
+
+      item QSlider
+      {
+         Name="NoName"
+         IsEnabled="false"
+         VarName="QSlider_1"
+         X="270"
+         Y="60"
+         Width="100"
+         Height="20"
+         MinWidth="0"
+         MinHeight="0"
+         Value="0"
+         MinValue="0"
+         MaxValue="36"
+         Orientation="Horizontal"
+      }
+   }
+
+   item QLabel
+   {
+      Name="NoName"
+      VarName="QLabel_4"
+      X="10"
+      Y="50"
+      Width="380"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Chars encrypted in cleartext and code"
+   }
+
+   item QComboBox
+   {
+      Name="NoName"
+      VarName="QComboBox_1"
+      X="180"
+      Y="210"
+      Width="140"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      InsertionPolicy="AtTop"
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      IsEnabled="false"
+      VarName="QPushButton_7"
+      X="180"
+      Y="240"
+      Width="70"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Add text"
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      IsEnabled="false"
+      VarName="QPushButton_8"
+      X="260"
+      Y="240"
+      Width="60"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Clear"
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      IsEnabled="false"
+      VarName="QPushButton_9"
+      X="330"
+      Y="240"
+      Width="60"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Show"
+   }
+
+   item QPushButton
+   {
+      Name="NoName"
+      VarName="QPushButton_10"
+      X="330"
+      Y="210"
+      Width="60"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+      Text="Show"
+   }
+
+   item QMultiLineEdit
+   {
+      Name="NoName"
+      IsHidden="true"
+      VarName="QMultiLineEdit_1"
+      X="360"
+      Y="290"
+      Width="30"
+      Height="20"
+      MinWidth="0"
+      MinHeight="0"
+   }
+}

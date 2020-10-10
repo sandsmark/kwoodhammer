@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2000-04-05 21:52+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: kwooddata.cpp:24
+msgid "Kwoodhammer 0.99"
+msgstr ""
+
+#: kwooddata.cpp:34
+msgid "Add to Data base"
+msgstr ""
+
+#: kwooddata.cpp:35
+msgid "to DB"
+msgstr ""
+
+#: kwooddata.cpp:41
+msgid "Resolve code"
+msgstr ""
+
+#: kwooddata.cpp:42
+msgid "Solve"
+msgstr ""
+
+#: kwooddata.cpp:61
+msgid "Open file"
+msgstr ""
+
+#: kwooddata.cpp:62
+msgid "Button"
+msgstr ""

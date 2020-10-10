@@ -1,0 +1,14 @@
+Begin3
+Title:          KWoodhammer
+Version:        1.00
+Entered-date:   2000-05-04
+Description:    A simple tool for traditional cryptography.
+Keywords:        
+Author:         Josef Spillner <dr_maux@users.sourceforge.net> 
+Maintained-by:  Josef Spillner <dr_maux@users.sourceforge.net> 
+Primary-site:   http://kwoodhammer.sourceforge.net	
+Home-page:      http://kwoodhammer.sourceforge.net
+Original-site:  http://www.maux.de
+Platforms:      Linux and other Unices
+Copying-policy: GNU Public License
+End
