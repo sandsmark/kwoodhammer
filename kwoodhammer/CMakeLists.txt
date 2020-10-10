@@ -44,13 +44,13 @@ install(FILES kwoodhammer.gif DESTINATION ${KDE1_DATADIR}/kwoodhammer/pics)
 
 
 install(FILES
-    index-1.html
-    index-2.html
-    index-3.html
-    index-4.html
-    index-5.html
-    index-6.html
-    index.html
+    docs/en/index-1.html
+    docs/en/index-2.html
+    docs/en/index-3.html
+    docs/en/index-4.html
+    docs/en/index-5.html
+    docs/en/index-6.html
+    docs/en/index.html
     DESTINATION ${KDE1_HTMLDIR}/en/kwoodhammer
 )
 
