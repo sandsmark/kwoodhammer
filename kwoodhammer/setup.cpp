@@ -72,16 +72,21 @@ void stat_load(char *name)
 	int i;
 	long j;
 	char str[255];
+
+	maxstatistics = 0;
+	for(i = 0; i < 256; i++)
+		statistics[i] = 0;
+
 	strcpy(str, "kwoodhammerbase");
 	strcat(str, name);
 	strcpy(currentbase, name);
 	FILE * sf;
 	if(strlen(name) == 0) sf = fopen(inhome(str), "r");
 	else sf = fopen(inlib(str), "r");
-	if(sf == NULL) fprintf(stderr, "Error opening statistics file!\n");
-	maxstatistics = 0;
-	for(i = 0; i < 256; i++)
-		statistics[i] = 0;
+	if(sf == NULL) {
+            fprintf(stderr, "Error opening statistics file!\n");
+            return;
+        }
 	while(!feof(sf))
 	{
 		fscanf(sf, "%c:%i\n", &i, &j);
@@ -100,7 +105,10 @@ void setup::stat_save(char *name)
 	strcpy(str, "kwoodhammerbase");
 	strcat(str, name);
 	FILE * sf = fopen(inhome(str), "w");
-	if(sf == NULL) fprintf(stderr, "Error opening statistics file!\n");
+	if(sf == NULL) {
+            fprintf(stderr, "Error opening statistics file!\n");
+            return;
+        }
 	for(int i = 0; i < 256; i++)
 		if(validletter(i)) fprintf(sf, "%c:%i\n", i, statistics[i]);
 	fclose(sf);
