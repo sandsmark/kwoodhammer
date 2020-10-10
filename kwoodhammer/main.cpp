@@ -18,12 +18,26 @@
 #include "common.h"
 #include <kapp.h>
 #include <stdlib.h>
+#include <qdir.h>
 
 kwood *kwoodw;
+
+static void ensureDataDir()
+{
+  QDir    dir;
+  QString fullpath;
+  fullpath.sprintf("%s/share/apps/kwoodhammer/", KApplication::localkdedir().data());
+  dir.setPath(fullpath);
+  if (!dir.exists()) {
+      dir.mkdir(fullpath);
+  }
+}
 
 int main(int argc, char *argv[])
 {
   KApplication a(argc, argv, "KWoodhammer");
+  ensureDataDir();
+
 	kwoodw = new kwood();
   a.setMainWidget(kwoodw);
 	kwoodw->setGeometry(200, 200, 400, 260);
