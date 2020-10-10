@@ -84,8 +84,14 @@ void stat_load(char *name)
 		statistics[i] = 0;
 
 	strcpy(str, "kwoodhammerbase");
-	strcat(str, name);
-	strcpy(currentbase, name);
+
+        if (name) {
+            strcat(str, name);
+            strcpy(currentbase, name);
+        } else {
+            strcat(str, currentbase);
+        }
+
 	FILE * sf;
 	if(strlen(name) == 0) sf = fopen(inhome(str), "r");
 	else sf = fopen(inlib(str), "r");
@@ -176,7 +182,7 @@ void setup::stat_add()
 			if(validletter(str[j])) statistics[str[j]]++;
 	}
 	stat_save("");
-	stat_load(currentbase);
+	stat_load(NULL);
 	stat_make();
 }
 
@@ -185,7 +191,7 @@ void setup::stat_clear()
 	for(int i = 0; i < 256; i++)
 		statistics[i] = 0;
 	stat_save("");
-	stat_load(currentbase);
+	stat_load(NULL);
 	stat_make();
 	snummax = 0;
 	for(int i = 0; i < 256; i++)
