@@ -33,6 +33,7 @@ install_icon(kwoodhammer.xpm)
 install(FILES kwoodhammer.kdelnk DESTINATION ${KDE1_APPSDIR}/Utilities/)
 
 install_icon(kwooddecrypt.xpm)
+install_icon(kwoodencrypt.xpm)
 install_icon(kwoodsetup.xpm)
 install_icon(kwoodnew.xpm)
 install_icon(kwoodopen.xpm)
